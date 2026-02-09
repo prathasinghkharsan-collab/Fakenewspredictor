@@ -7,6 +7,7 @@ import streamlit as st
 import pickle
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.linear_model import LogisticRegression
 import plotly.express as px
 import plotly.graph_objects as go
 
@@ -149,4 +150,5 @@ if uploaded_file is not None:
             barmode='group',
             title="Prediction Probabilities for First 10 Articles"
         )
+
         st.plotly_chart(fig_batch, use_container_width=True)
