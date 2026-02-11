@@ -10,6 +10,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 import plotly.express as px
 import plotly.graph_objects as go
+import numpy as np
+import joblib
 
 # ===========================
 # Load model & TF-IDF
@@ -152,3 +154,4 @@ if uploaded_file is not None:
         )
 
         st.plotly_chart(fig_batch, use_container_width=True)
+
